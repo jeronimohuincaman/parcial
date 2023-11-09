@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="panel.css">
+    <title>Panel de transferencias</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="h1 text-white text-center">Panel de transferencias</h1>
+        <div class="row">
+            <div class="col-6">
+            <form action="" id="form" class="transaccion form rounded-4 mx-2 p-4 needs-validation" novalidate>
+                <div class="container-sm">
+                    <h4>Trasferir a: </h4>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="origen" class="form-label">Origen</label>
+                            <select id="origen" class="form-select" aria-label="origen" name="origen" required>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="destino" class="form-label">Destino</label>
+                            <select id="destino" class="form-select" aria-label="destino" name="destino" required>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label for="importe" class="form-label">Importe</label>
+                            <input type="number" class="form-control" name="importe" id="importe" required>
+                        </div>
+                        <div class="col-1 text-center py-4">
+                            <button type="button" class="btn btn-primary rounded-circle" id="more">+</button>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-12 ">
+                            <button id="transaccion" class="btn btn-success">Transferir</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="nueva_cuenta" class="col-6" hidden>
+            <form action="" id="form-cuentas" >
+                <div class="container bg-danger py-3 rounded-2">
+                    <h4>Crear una nueva cuenta</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="saldo" class="form-label">Saldo</label>
+                            <input type="text" id="saldo" class="form-control">                                
+                        </div>
+                        <div class="col-6 py-4 ">
+                            <button type="button" id="crear" class="btn btn-success mt-2">Crear</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+    <script src="../bootstrap.config.js"></script>
+    <script  type="module" src="./index.js"></script>
+</html>
